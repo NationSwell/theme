@@ -1,0 +1,33 @@
+<div class="read-next" data-module='{"name": "more-stories"}'>
+    <div class="container">
+        <h3 class="hd-g read-next__heading">{{ more_stories_heading_prefix }}</h3>
+
+        <ul class="story-list">
+            {% for post in post.more_stories %}
+                <li>
+                    <article class="story story--tease">
+                        <a href="{{ post.permalink }}" class="link-wrapper" data-track='{"position": {{ loop.index }}}'>
+                            <figure class="story__feature fl">
+                                {% include 'sponsorship-tout.twig' %}
+                                
+                                <img src="{{ post.thumbnail.src|resize(600, 330) }}" alt="{{ post.thumbnail._wp_attachment_image_alt }}" data-pin-no-hover="true"/>
+
+                                {% if post.content_type in ['video'] %}
+                                    <div class="type-indicator-container">
+                                        <span class="icon icon_{{ post.content_type }} type-indicator"></span>
+                                    </div>
+                                {% endif %}
+                            </figure>
+
+                            <header class="story__header">
+                                <span class="rubric">{{ post.category }}</span>
+                                <h2 class="hd-u story__hed">{{ post.post_title }}</h2>
+                                <p class="story__dek">{{ post.dek }}</p>
+                            </header>
+                        </a>
+                    </article>
+                </li>
+            {% endfor %}
+        </ul>
+    </div>
+</div>

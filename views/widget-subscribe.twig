@@ -1,0 +1,24 @@
+<div class="module module--bg module--sidebar module--blue newsletter-subscribe" data-module='{"name": "sidebar:subscribe"}'>
+    <header>
+        <div class="indicator indicator--blue indicator--module icon icon_nationswell-flag"></div>
+        <h3 class="hd-e module__heading">{{ title }}</h3>
+    </header>
+
+    <p>{{ description }}</p>
+
+    <div id="mc_embed_signup">
+        <form action="" method="post" name="mc-embedded-subscribe-form" class="mc-form validate" target="_blank" novalidate>
+            <div class="mc-field-group">
+                <div class="form-element">
+                    <input type="email" value="" placeholder="Enter your email address" name="EMAIL" class="required email text-input" id="mc-email">
+                    <input type="hidden" name="listid" value="">
+                    <label for="mc-email" class="mc-email-status"></label>
+                </div>
+            </div>
+
+            <div class="cf">
+                <input type="submit" value="Go!" name="subscribe" id="mc-embedded-subscribe" class="btn btn--solid" data-modal-disable="{{ modal_joinus_subscribe_expiration }}">
+            </div>
+        </form>
+    </div>
+</div>

@@ -1,0 +1,27 @@
+<div class="modal modal--join-us" data-modal="join-us" data-modal-pageload="true" data-module='{"name": "modal:joinus"}'>
+    <div class="modal__content module module--bg module--blue">
+        <header>
+            <div class="indicator indicator--blue indicator--module icon icon_nationswell-flag"></div>
+            <h3 class="hd-e module__heading">{{ modal_joinus_header }}</h3>
+        </header>
+
+        <h2 class="hd-l modal__heading">{{ modal_joinus_body_text }}</h2>
+
+        <div id="mc_embed_signup">
+            <form action="" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="mc-form validate" target="_blank" novalidate>
+                <div class="mc-field-group cf">
+                    <div class="join-us__email icon icon_envelope">
+                        <input type="email" value="" placeholder="Enter Your Email" name="EMAIL" class="required email fl" id="mc-email-modal">
+                        <input type="hidden" name="listid" value=""  class="popup-control" data-modal-action="close" data-modal-disable="{{ modal_joinus_subscribe_expiration }}">
+                        <input type="submit" value="{{ modal_joinus_subscribe_button_text }}" name="subscribe" id="mc-embedded-subscribe" class="btn btn--subscribe fl">
+                        <label for="mc-email-modal" class="mc-email-status"></label>
+                    </div>
+                </div>
+            </form>
+        </div>
+
+        <span class="modal--join-us__opt-out">{{ modal_joinus_opt_out_text }} <a data-modal-action="close" data-modal-disable="{{ modal_joinus_opt_out_expiration }}" href="#">{{ modal_joinus_opt_out_button_text }}</a></span>
+
+        <button class="btn btn--close icon icon_close modal__close" data-modal-action="close" data-modal-disable="{{ modal_joinus_close_expiration }}"></button>
+    </div>
+</div>

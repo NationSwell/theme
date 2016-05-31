@@ -1,0 +1,45 @@
+{% extends "base.twig" %}
+
+{% block topics %}
+{% endblock %}
+
+{% block content %}
+<div class="container" ng-app="nsc_portal">
+    <div id="nscPortal" class="portal__main-column" ng-controller="portalController as portal">
+        <div id="portal-nav">
+            <div class="logo-container"><a href="{{ post.link }}"><img class="council-logo" src="{{ theme_dir }}/img/nscouncil.png" alt="NationSwell Logo"/></a></div>
+            <div class="portal-tabs">
+                <ul>
+                    <li ng-class="{ active:portal.isSet(0) }">
+                        <a href ng-click="portal.setTab(0)">Directory</a>
+                    </li>
+                    <li ng-class="{ active:portal.isSet(1) }">
+                        <a href ng-click="portal.setTab(1)">Events</a>
+                    </li>
+                    <li ng-class="{ active:portal.isSet(2) }">
+                        <a href ng-click="portal.setTab(2)">Updates</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="static__content" ng-show="portal.isSet(-1)">
+            {{ page_content }}
+        </div>
+
+        {% include 'nsc-directory.twig' %}
+
+        {% include 'nsc-events.twig' %}
+
+        {% include 'nsc-updates.twig' %}
+    </div>
+</div>
+{% endblock %}
+
+{% block modals %}
+{% endblock %}
+
+{% block extra_includes %}
+    <script src="{{ static_dir }}/js/src/vendor/angular.min.js"></script>
+    <script src="{{ static_dir }}/js/src/nscportal.js"></script>
+{% endblock %}

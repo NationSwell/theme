@@ -1,0 +1,294 @@
+.portal__main-column {
+  position: relative;
+  width: 90%;
+  height: auto;
+  margin-top: 5rem;
+  font-family: $gudea;
+  color: $gray1;
+
+  .static__content {
+
+    background-image: url("http://nationswell.com/wp-content/uploads/2014/11/Nov_12_Vanessa_crowd-e1416603082101.jpg");
+    background-size: cover;
+    background-position: right center;
+
+    a {
+      @extend %story-link;
+    }
+
+    p, ul {
+      color: $white;
+      background-color: rgba(#4dabe0, .6);
+    }
+
+    ul {
+      list-style-type: disc;
+      list-style-position: inside;
+    }
+
+    em {
+      font-style: italic;
+    }
+  }
+}
+
+#portal-nav {
+  display:block;
+  padding: 1rem 0 6rem;
+  .logo-container {
+    width: 40%;
+    max-width: 250px;
+    display: inline-block;
+    .council-logo {
+      width: 100%;
+    }
+  }
+
+  .portal-tabs {
+    float: right;
+    display: inline-block;
+    font-family: $oswald;
+    font-size: 3rem;
+    a {
+      color: $ns_navy2;
+      border-bottom: 0.25rem solid $ns_navy2;;
+
+      &:hover {
+        color: $ns_red;
+      }
+    }
+    .active a {
+      color: $ns_blue1;
+      border-bottom: 0.25rem solid $ns_red;
+    }
+
+    ul {
+      display:block;
+      li{
+        display: inline-block;
+        padding: 0 1rem;
+      }
+    }
+
+  }
+}
+
+.loader {
+  width: 30px;
+  height: 30px;
+  margin: auto;
+  padding: 5rem;
+}
+
+.member-title {
+  position: relative;
+  display: table-cell;
+  vertical-align: middle;
+  width: 280px;
+
+  h1 {
+    font-size: 4rem;
+    line-height: 1.3;
+    color: $ns_black;
+    font-family: $oswald;
+    font-weight: $regular;
+    -webkit-font-smoothing: antialiased;
+  }
+}
+
+
+#directory-nav {
+  display: table;
+  width: 100%;
+
+
+  #directory-tabs {
+    display: table-cell;
+    vertical-align: middle;
+    padding: 1rem 0 0;
+
+    ul {
+      display: block;
+      width: 100%;
+      li {
+        display: inline-block;
+        text-align: center;
+        width: 15%;
+      }
+      a {
+        color: $ns_navy0;
+        &:hover {
+          color: $ns_blue1;
+        }
+      }
+
+      .active a {
+        color: $ns_blue1;
+        border-bottom: 0.25rem solid $ns_red;
+      }
+    }
+  }
+}
+.contacts {
+  padding-top: 3rem;
+
+  .contact-info {
+    display: block;
+    padding: 3rem 0;
+    width: 100%;
+
+    .contact-image {
+      display: inline-block;
+      vertical-align: top;
+      .contact__portrait {
+        border-radius: 50%;
+        margin: 0;
+      }
+    }
+
+    .about-contact {
+      display: inline-block;
+      text-align: left;
+
+      .hd-n {
+        display: inline-block;
+      }
+
+      .bio-content {
+        padding: 1rem 0;
+        line-height: 1.4;
+      }
+
+      .contact-interests {
+        color: $ns_blue1;
+      }
+
+      .contact-social {
+        display: inline-block;
+        text-align: center;
+        top: -.6rem;
+        position: relative;
+        margin-left: 1rem;
+
+        .icon {
+          line-height: 2.5;
+          margin-right: 0.75rem;
+          &:before {
+            padding: 0.6rem 0.7rem;
+            color: $white;
+            margin: .5rem 1rem 0 0;
+            height: 1rem;
+          }
+        }
+        .contact-phone {
+          &:before {
+            font-family: $gudea;
+            background-color: $ns_navy0;
+            content: "\0023";
+            font-weight: 700;
+            padding: 0.35rem .9rem .2rem;
+
+          }
+        }
+
+        .contact-email {
+          color: $gray1;
+
+          &:before {
+            background-color: $ns_red;
+            padding: 0.6rem .6rem .3rem;
+          }
+        }
+
+        .contact-linkedin {
+          &:before {
+            background-color: $gray0;
+            padding: 0.6rem .8rem .3rem;
+          }
+        }
+
+        .contact-twitter {
+          &:before {
+            background-color: $ns_blue3;
+            padding: 0.6rem .8rem .3rem;
+          }
+        }
+      }
+    }
+  }
+}
+
+.events {
+  ul {
+    padding: 3rem 0;
+  }
+
+  .event-info {
+    display: block;
+    padding: 3rem 0 4.5rem;
+    width: 100%;
+
+    .event-date {
+      display: inline-block;
+      vertical-align: top;
+      border-radius: 50%;
+      margin-left: 2%;
+      font-size: 3rem;
+      color: $white;
+      width: 12rem;
+      height: 12rem;
+
+      ul {
+        padding: 3rem 2.5rem 1rem;
+        li {
+          text-align: center;
+          font-weight: 600;
+        }
+      }
+    }
+
+    .upcoming {
+      background-color: $ns_red;
+    }
+    .past {
+      background-color: $ns_blue1;
+    }
+
+    .about-event {
+      display: inline-block;
+      text-align: left;
+      width: 70%;
+      padding-left: 5%;
+
+      .event-description {
+        padding: 1rem 0;
+        line-height: 1.4;
+      }
+
+      .event-details {
+        padding-top: 1rem;
+        color: $ns_navy2;
+        font-weight: 600;
+      }
+
+      .event-link a {
+        color: $ns_blue1;
+        &:hover {
+          color: $ns_red;
+        }
+      }
+    }
+
+  }
+}
+
+#nsc-updates {
+  .story__feature {
+    width: 302px;
+    height: 178px;
+    overflow: hidden;
+  }
+  .rubric {
+    background: transparent;
+  }
+}
