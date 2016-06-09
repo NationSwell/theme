@@ -37,6 +37,7 @@ function yoast_wpseo_title( $title ) {
 function add_to_context( $data ) {
     $data['js_main'] = 'combined' . (WP_DEBUG ? '.min' : '.min') . '.js';
     $data['version'] = VERSION;
+	$cdn = 'http://nmelp3rtl8l2tnuwd2blzv3ecu.wpengine.netdna-cdn.com';
     $data['static_dir'] = '/static/' . VERSION;
 
     /* this is where you can add your own data to Timber's context object */
@@ -225,6 +226,8 @@ include_once('lib/widgets/widget-stories.php');
 include_once('lib/widgets/widget-contact.php');
 include_once('lib/widgets/widget-text.php');
 include_once('lib/widgets/widget-voting.php');
+//partners widget added 6/9/2016 @cloudred
+include_once('lib/widgets/widget-partners.php');
 
 // Plugin Activation
 //include_once('lib/tgm-plugin-activation/tgm-config.php');
